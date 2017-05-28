@@ -1,6 +1,6 @@
 'use strict';
 
-var BASE_URL = 'http://easybooky.herokuapp.com';
+var BASE_URL = 'https://easybooky.herokuapp.com';
 //var BASE_URL = 'http://localhost:8080'
 
 
