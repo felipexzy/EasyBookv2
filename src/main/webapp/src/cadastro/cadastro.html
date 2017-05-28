@@ -1,0 +1,46 @@
+
+<section class="container">
+
+    <form id="form-cadastro" ng-submit="cadastro(usuario)" class="8u -2u 12u(medium)">
+
+        <div>
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" maxlength="45" minlength="1" ng-model="usuario.nome"/>
+        </div>
+        <div>
+            <label for="email">E-mail: </label>
+            <input type="email" id="email" name="email" maxlength="40" minlength="10" ng-model="usuario.email"/>
+        </div>
+        <div>
+            <label for="endereco">Endereço: </label>
+            <input type="text" id="endereco" name="endereco" maxlength="45" minlength="1" ng-model="usuario.endereco"/>
+        </div>
+        <div>
+            <label for="telefone" >Telefone: </label>
+             <input type="text" name="telefone" maxlength="15" ng-model="usuario.telefone" ui-br-phone-number/>
+        </div>
+        <div>
+            <label for="senha">Senha: </label>
+            <input type="password" id="senha" name="senha" maxlength="25" minlength="5" ng-model="usuario.senha"/>
+        </div> <br/>
+
+        <input type="submit" value="Salvar" id="btn btn-save" class="botao" />
+        <input type="button" value="Cancelar" ng-click="cancelar()" id="btn btn-cancel" class="botao" />
+
+    </form>
+</section>
+
+<div id="footer-wrapper">
+            <footer id="footer" class="container">
+                <div class="row">
+                    <div class="12u">
+                        <div id="copyright">
+                            <ul class="menu">
+                                <li>&copy; Algodão Doce. All rights reserved</li>
+                                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>

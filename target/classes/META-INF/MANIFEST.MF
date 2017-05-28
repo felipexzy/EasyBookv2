@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: EasyBook
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Mizael
+Implementation-Vendor-Id: com.algodaodoce.easybook
+Build-Jdk: 1.8.0_131
+Implementation-URL: http://projects.spring.io/spring-boot/EasyBook/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

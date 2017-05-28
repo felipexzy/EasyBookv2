@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+
+<html ng-app="easybook">
+
+<head>
+    <title>EasyBook</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link rel="stylesheet" href="assets/css/ng-notify.min.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+    <!-- inject:css -->
+    <!-- endinject -->
+
+</head>
+
+<body class="homepage">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <div id="header-wrapper">
+            <header id="header" class="container">
+
+                <!-- Logo -->
+                <div id="logo">
+                    <h1><a href="#/">EasyBook</a></h1>
+                </div>
+
+                <!-- Nav -->
+                <nav id="nav" ng-controller="headerSrv">
+                    <ul>
+                        <li class="current_page_item"><a href="#/">Home</a></li>
+                        <!-- <li><a href="#/cadastro">Cadastre-se</a></li> -->
+                        <li><a ng-show="!authDetails.authenticated" href="#/cadastro">Cadastre-se</a></li>
+                        <!-- <li><a href="#/login">Entrar</a></li> -->
+                        <li ng-show="!authDetails.authenticated"><a href="#/login">Entrar</a></li>
+                        <li ng-show="authDetails.authenticated"><a ng-click="logout()" href="#/">Sair</a></li>
+                        <!-- <li><a href="#/logout" ng-click ="logout()">Sair</a></li> -->
+                    </ul>
+                </nav>
+
+            </header>
+        </div>
+        
+         <nav id="id-toogle" class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button id="btn-toogle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse toogle-custom" id="bs-example-navbar-collapse-1" ng-controller="headerSrv">
+              <ul class="nav navbar-nav">
+                <li class="current"><a href="#/">Home</a></li>
+                <li ng-show="!authDetails.authenticated"><a href="#/cadastro">Cadastre-se</a></li>
+                <li ng-show="!authDetails.authenticated"><a href="#/login">Login</a></li>
+                <li ng-show="authDetails.authenticated"><a ng-click="logout()" href="#/">Sair</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+
+        <!-- Content -->
+
+        <ng-view />
+
+        <!-- Footer -->
+        <div id="footer-wrapper">
+            <footer id="footer" class="container">
+                <div class="row">
+                    <div class="12u">
+                        <div id="copyright">
+                            <ul class="menu">
+                                <li>&copy; Algodão Doce. All rights reserved</li>
+                                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <!--<script src="assets/js/main.js"></script> -->
+
+    <!-- Angular.js -->
+
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-cookies.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+    <script src="assets/js/ng-file-upload.js"></script>
+    <script src="assets/js/ng-file-upload-shim.js"></script>
+    <script src="assets/js/ng-notify.min.js"></script>
+    <script src="assets/js/ngStorage.min.js"></script>
+    <script src="assets/js/checklist-model.js"></script>
+    <script src="assets/js/angular-input-masks-standalone.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>  
+
+    <!-- inject:js -->
+
+    <script src="src/index.js"></script>
+
+    <script src="src/anunciousuario/anunusu.js"></script>
+
+    <script src="src/anuncio/anuncio.js"></script>
+
+    <script src="src/cadastro/cadastro.js"></script>
+
+    <script src="src/home/home.js"></script>
+
+    <script src="src/login/login.js"></script>
+
+    <script src="src/login/login.logout.service.js"></script>
+
+    <script src="src/usuario/usuario.js"></script>
+
+    <script src="src/utils/header.js"></script>
+
+    <script src="src/utils/interceptor.js"></script>
+
+    <script src="src/utils/util.services.js"></script>
+
+    <!-- endinject -->
+
+</body>
+
+</html>
