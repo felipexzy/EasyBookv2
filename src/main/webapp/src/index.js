@@ -1,7 +1,7 @@
 'use strict';
 
-//var BASE_URL = 'http://easybookalgodaodoce.herokuapp.com';
-var BASE_URL = 'http://localhost:8080'
+var BASE_URL = 'http://easybooky.herokuapp.com';
+//var BASE_URL = 'http://localhost:8080'
 
 
 angular.module('easybook', ['checklist-model', 'ngNotify', 'ngRoute', 'ngCookies', 'ngStorage', 
